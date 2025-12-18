@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAI - Edukasi Lingkungan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-page" class="page active">
+        <div class="login-card">
+            <h1>EcoAI Login</h1>
+            <p>Silakan masuk untuk akses edukasi</p>
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username (Nama Bebas)" required>
+                <input type="password" id="password" placeholder="Password (Khusus Soshum)" required>
+            </div>
+            <button onclick="handleLogin()">Masuk</button>
+            <p id="error-msg" class="error">Password salah! Gunakan kata kunci bidang studi sosial.</p>
+        </div>
+    </div>
+
+    <div id="main-page" class="page">
+        <div class="overlay-decoration"></div>
+        
+        <div class="menu-container">
+            <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+            <div id="dropdown" class="dropdown-content">
+                <a href="#" onclick="showPage('main-page')">Kembali ke Atas</a>
+                <a href="#" onclick="logout()">Log Out</a>
+            </div>
+        </div>
+
+        <header class="content-header">
+            <h1>Klasifikasi Lingkungan Berbasis AI & Edukasi Sosial</h1>
+        </header>
+
+        <main class="content-body">
+            <section class="image-section">
+                
+            </section>
+
+            <section class="text-block">
+                <h2>Apa itu Klasifikasi Lingkungan Berbasis AI?</h2>
+                <p>Klasifikasi lingkungan berbasis AI adalah sistem cerdas yang menggunakan algoritma pembelajaran mesin (*machine learning*) untuk mengenali, mengelompokkan, dan memetakan kondisi ekosistem secara otomatis. Dengan memanfaatkan data dari sensor IoT, citra satelit, dan kamera, AI dapat membedakan antara wilayah hutan yang sehat, lahan kritis, hingga tingkat polusi di perkotaan secara presisi.</p>
+                <p>Edukasi sosial menjadi jembatan agar teknologi ini tidak hanya berhenti di laboratorium. Ini melibatkan penyadaran masyarakat tentang bagaimana data AI dapat digunakan untuk mengubah perilaku sosial, seperti pengelolaan sampah kolektif dan perlindungan zona hijau berdasarkan hasil klasifikasi data yang akurat.</p>
+            </section>
+
+            <section class="grid-container">
+                <div class="card">
+                    <h3>Ciri-Ciri Sistem</h3>
+                    <ul>
+                        <li><strong>Analisis Prediktif:</strong> Mampu memprediksi kerusakan lingkungan sebelum terjadi.</li>
+                        <li><strong>Otomasi Data:</strong> Mengurangi kesalahan manusia dalam pemantauan ekosistem.</li>
+                        <li><strong>Integrasi Sosial:</strong> Hasil data diubah menjadi bahasa yang mudah dipahami warga awam.</li>
+                        <li><strong>Skalabilitas:</strong> Dapat diterapkan dari skala taman kota hingga hutan nasional.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Cara Implementasi</h3>
+                    <p>Proses dimulai dengan <strong>Pengumpulan Data</strong> melalui drone atau satelit. Selanjutnya, data masuk ke tahap <strong>Pelabelan</strong> di mana pakar lingkungan mengajarkan AI membedakan objek. Setelah model AI cerdas, dilakukan <strong>Diseminasi Sosial</strong> melalui aplikasi warga agar mereka tahu area mana yang butuh konservasi mendesak.</p>
+                </div>
+            </section>
+
+            
+
+            <section class="text-block">
+                <h2>Urgensi Edukasi Sosial</h2>
+                <p>Edukasi sosial berperan dalam memastikan bahwa klasifikasi AI tidak dianggap sebagai ancaman atau sekadar angka. Tanpa edukasi, data AI tentang kerusakan hutan tidak akan memicu aksi penanaman kembali. Oleh karena itu, kurikulum pendidikan berbasis lingkungan harus mulai mengadopsi literasi digital agar masyarakat mampu membaca indikator-indikator lingkungan yang diberikan oleh sistem AI.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Info lebih lanjut hubungi: <strong>085655703937</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
