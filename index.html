@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAI - Klasifikasi Lingkungan & Edukasi Sosial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animasi Custom untuk Overlay */
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hidden-page { display: none; }
+        body { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); min-height: 100vh; }
+    </style>
+</head>
+<body class="text-white font-sans">
+
+    <div id="loginPage" class="flex items-center justify-center min-vh-100 h-screen">
+        <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-2xl w-96">
+            <h2 class="text-2xl font-bold mb-6 text-center text-green-700">EcoAI Login</h2>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold">Username</label>
+                    <input type="text" id="username" placeholder="Contoh: Zainal" class="w-full p-2 border border-gray-300 rounded mt-1 focus:ring-2 focus:ring-green-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold">Password</label>
+                    <input type="password" id="password" placeholder="Hint: soshum" class="w-full p-2 border border-gray-300 rounded mt-1 focus:ring-2 focus:ring-green-500 outline-none">
+                </div>
+                <button onclick="checkLogin()" class="w-full bg-green-600 text-white py-2 rounded-lg font-bold hover:bg-green-700 transition">Masuk</button>
+            </div>
+            <p id="errorMsg" class="text-red-500 text-sm mt-3 text-center hidden">Password salah! Harus 'soshum'.</p>
+        </div>
+    </div>
+
+    <div id="mainPage" class="hidden-page relative min-h-screen pb-20">
+        
+        <div class="absolute top-5 right-5 z-50">
+            <button onclick="toggleMenu()" class="text-3xl p-2 bg-black/20 rounded-full">⋮</button>
+            <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded shadow-xl overflow-hidden">
+                <button onclick="location.reload()" class="block px-4 py-2 hover:bg-gray-100 w-full text-left">Kembali ke Utama</button>
+                <button onclick="location.reload()" class="block px-4 py-2 hover:bg-red-100 text-red-600 w-full text-left font-bold">Log Out</button>
+            </div>
+        </div>
+
+        <header class="pt-20 px-10">
+            <div class="glass-morphism p-10 rounded-3xl mb-10 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Klasifikasi Lingkungan <br><span class="text-green-400">Berbasis AI & Edukasi Sosial</span></h1>
+                <p class="text-lg opacity-90 max-w-2xl mx-auto">Membangun harmoni antara teknologi kecerdasan buatan dengan keberlangsungan ekosistem sosial masyarakat.</p>
+            </div>
+        </header>
+
+        <main class="max-w-5xl mx-auto px-6 space-y-12">
+            
+            
+
+            <section class="bg-white/10 p-8 rounded-2xl">
+                <h2 class="text-3xl font-bold mb-4 text-green-300">1. Pengertian</h2>
+                <p class="leading-relaxed text-lg">
+                    Klasifikasi Lingkungan berbasis AI adalah proses kategorisasi kondisi geografis, ekologis, dan pemukiman menggunakan algoritma Machine Learning dan Computer Vision. AI mampu menganalisis citra satelit atau data sensor untuk menentukan apakah suatu wilayah termasuk dalam kategori hutan lindung, zona industri, atau pemukiman padat. Edukasi Sosial melengkapi teknologi ini dengan memberikan pemahaman kepada masyarakat mengenai pentingnya menjaga batasan ekologi demi kesejahteraan bersama secara sosiologis.
+                </p>
+            </section>
+
+            <section class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white/10 p-8 rounded-2xl">
+                    <h2 class="text-3xl font-bold mb-4 text-green-300">2. Ciri-Ciri Sistem</h2>
+                    <ul class="list-disc ml-6 space-y-2 opacity-90">
+                        <li><strong>Presisi Tinggi:</strong> Menggunakan neural networks untuk deteksi objek lingkungan.</li>
+                        <li><strong>Real-Time Data:</strong> Informasi diperbarui secara otomatis dari sumber data digital.</li>
+                        <li><strong>Partisipatif:</strong> Masyarakat dapat berkontribusi memberikan data lapangan melalui aplikasi.</li>
+                        <li><strong>Adaptif:</strong> Sistem mampu belajar dari perubahan iklim yang terjadi di wilayah tersebut.</li>
+                    </ul>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl">
+                    <h2 class="text-3xl font-bold mb-4 text-green-300">3. Cara Kerja (Langkah-Langkah)</h2>
+                    <ol class="list-decimal ml-6 space-y-2 opacity-90">
+                        <li><strong>Pengumpulan Data:</strong> Pengumpulan dataset berupa foto udara dan data sensus sosial.</li>
+                        <li><strong>Preprocessing:</strong> Pembersihan data agar siap diproses oleh model AI.</li>
+                        <li><strong>Training Model:</strong> Melatih AI untuk mengenali pola kerusakan lingkungan.</li>
+                        <li><strong>Implementasi Sosial:</strong> Hasil klasifikasi digunakan pemerintah untuk kebijakan edukasi warga lokal.</li>
+                    </ol>
+                </div>
+            </section>
+
+            
+
+            <section class="bg-white/10 p-8 rounded-2xl">
+                <h2 class="text-3xl font-bold mb-4 text-green-300">4. Pentingnya Edukasi Sosial</h2>
+                <p class="leading-relaxed">
+                    Teknologi tanpa edukasi sosial akan menjadi sia-sia. Masyarakat perlu memahami bahwa klasifikasi AI bukan sekadar angka, melainkan peringatan dini terhadap kerusakan alam. Melalui edukasi sosial, kita membentuk pola pikir kolektif untuk melakukan restorasi lingkungan secara mandiri, didorong oleh data akurat dari sistem cerdas yang telah dibangun.
+                </p>
+            </section>
+        </main>
+
+        <footer class="mt-20 border-t border-white/20 p-6 text-center">
+            <p class="text-sm opacity-70">Info lebih lanjut hubungi: <span class="font-bold text-green-300">085655703937</span></p>
+        </footer>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            const error = document.getElementById('errorMsg');
+
+            // Logika: username bebas, password harus 'soshum'
+            if (user !== "" && pass === "soshum") {
+                document.getElementById('loginPage').classList.add('hidden-page');
+                document.getElementById('mainPage').classList.remove('hidden-page');
+            } else {
+                error.classList.remove('hidden');
+            }
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Close menu if click outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.text-3xl')) {
+                const menu = document.getElementById('dropdownMenu');
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
